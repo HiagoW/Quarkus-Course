@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "b0ed17c5-c837-431d-b928-5086046fef93",
+		"name": "Quarkus course",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastra usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Ana Carolina\",\r\n    \"cpf\":  \"321.456.789-00\",\r\n    \"username\": \"ana\",\r\n    \"password\": \"123321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastra admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Alura Cursos Online\",\r\n    \"cpf\":  \"456.789.123-00\",\r\n    \"username\": \"alura\",\r\n    \"password\": \"321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastra ordem",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "hiago",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"preco\": 670.10,\r\n    \"tipo\": \"COMPRA\",\r\n    \"userId\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ordens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ordens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca ordens",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://alura-bitcoin.herokuapp.com/bitcoins",
+					"protocol": "https",
+					"host": [
+						"alura-bitcoin",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"bitcoins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar usuarios",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "321",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "alura",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar ordens",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "321",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "alura",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ordens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ordens"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
